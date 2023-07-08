@@ -37,8 +37,8 @@ export async function getServerSideProps(context: any) {
   };
 }
 
-const getCity = (param) => {
-  const cityParam = param.trim();
+const getCity = (param: any) => {
+  const cityParam: any = param.trim();
   // get city id
   const splitCity = cityParam.split("-");
   const id = splitCity[splitCity.length - 1];
@@ -47,7 +47,7 @@ const getCity = (param) => {
     return null;
   }
 
-  const city = cities.find((city) => city.id.toString() == id);
+  const city: any = cities.find((city) => city.id.toString() == id);
 
   if (city) {
     return city;
@@ -57,13 +57,13 @@ const getCity = (param) => {
 };
 
 export default function City({ slug, data }) {
-  let currentTemp = Math.round(data.main.temp);
-  let currentLow = Math.round(data.main.temp_min);
-  let currentHigh = Math.round(data.main.temp_max);
-  let feelsLike = Math.round(data.main.feels_like);
-  let wind = Math.round(data.wind.speed);
+  let currentTemp: any = Math.round(data.main.temp);
+  let currentLow: any = Math.round(data.main.temp_min);
+  let currentHigh: any = Math.round(data.main.temp_max);
+  let feelsLike: any = Math.round(data.main.feels_like);
+  let wind: any = Math.round(data.wind.speed);
 
-  let cityName = data.name;
+  let cityName: any = data.name;
 
   return (
     <>
