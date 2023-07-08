@@ -56,7 +56,7 @@ const getCity = (param: any) => {
   }
 };
 
-export default function City({ slug, data }) {
+export default function City({ slug: any, data }) {
   let currentTemp: any = Math.round(data.main.temp);
   let currentLow: any = Math.round(data.main.temp_min);
   let currentHigh: any = Math.round(data.main.temp_max);
