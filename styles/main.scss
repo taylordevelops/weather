@@ -1,0 +1,239 @@
+$f-light: 300;
+$f-regular: 400;
+$f-semi-bold: 600;
+$f-bold: 700;
+$f-extra-bold: 800;
+
+// colours
+$dark: #242424;
+$primary: #ffffff;
+$secondary: #41545b;
+$tertiary: #22b0db;
+
+// global
+
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100vw;
+  height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+}
+
+
+
+.home {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.search {
+  max-width: 60%;
+  margin: 0 20% 0 20%;
+  position: relative;
+  
+
+  input {
+    width: 100%;
+    max-width: 100%;
+    padding: 0.5rem 0.5rem;
+    border-radius: 10px;
+    border: 2px solid $primary;
+    font-size: 1.25rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  ul {
+    position: absolute;
+    top: calc(100% + 10px);
+    width: 100%;
+    padding: 0.5rem 0.5rem;
+    margin: 0;
+    list-style: none;
+    border: 2px solid $primary;
+    border-radius: 10px;
+    z-index: 100;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+    li {
+      &:not(:last-child) {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      }
+
+      a {
+        display: block;
+        text-decoration: none;
+        color: $dark;
+        font-weight: $f-semi-bold;
+        transition: all 0.3s ease;
+        width: 100%;
+        padding: 10px 0;
+
+        &:hover {
+          color: $dark;
+          text-decoration: underline;
+          text-decoration: bold;
+        }
+      }
+    }
+  }
+
+  &__no-results {
+    padding: 15px 0;
+  }
+}
+
+.places {
+  margin-top: 30px;
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  &__box {
+    flex: 0 0 25%;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    a {
+      display: block;
+      width: 100%;
+      position: relative;
+      text-decoration: none;
+
+      &:hover {
+        span {
+          opacity: 1;
+        }
+
+        img {
+          opacity: 0.8;
+        }
+      }
+
+      span {
+        text-decoration: none;
+        font-weight: $f-bold;
+        color: $dark;
+        font-size: 1.25rem;
+        opacity: 0.9;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+
+}
+
+
+
+
+
+/* CSS */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+body{
+  font-family: 'Work Sans', sans-serif;
+  background-image: linear-gradient(
+    0deg,
+    hsl(207deg 92% 85%) 0%,
+    hsl(210deg 86% 85%) 10%,
+    hsl(212deg 78% 85%) 20%,
+    hsl(215deg 73% 86%) 30%,
+    hsl(218deg 66% 86%) 40%,
+    hsl(220deg 60% 86%) 50%,
+    hsl(221deg 61% 89%) 60%,
+    hsl(219deg 62% 92%) 70%,
+    hsl(221deg 57% 95%) 80%,
+    hsl(218deg 57% 97%) 90%,
+    hsl(0deg 0% 100%) 100%
+  );
+}
+.appLogo{
+  text-align: center;
+  font-size: 300%;
+}
+.container{
+  max-width: 600px;
+  margin: 0 auto;
+  
+}
+
+.cityName{
+  text-align: center;
+  font-size: 300%;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 2rem;
+  border-radius: 1rem;
+}
+.currentTemp{
+  font-size: 300%;
+}
+
+.bottomRow{
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 2rem;
+  border-radius: 1rem;
+}
+.middleRow{
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 2rem;
+  border-radius: 1rem;
+}
+.middleRow > div{
+  width: 50%;
+  padding: 2rem;
+  text-align: center;
+}
+.bottomRow > div{
+
+  padding: 2rem;
+
+}
+.wind{
+  margin-top: 0.3rem;
+}
+.windText{
+  font-size: 200%;
+}
+.smallLabel{
+  font-size: 75%;
+  text-transform: uppercase;
+}
+.largeLabel{
+  font-size: 75%;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 500px) {
+  .container{
+  margin: 35% auto;
+}}
