@@ -47,7 +47,7 @@ const getCity = (param: any) => {
     return null;
   }
 
-  const city: any = cities.find((city) => city.id.toString() == id);
+  const city = cities.find((city: any) => city.id.toString() == id);
 
   if (city) {
     return city;
@@ -56,7 +56,7 @@ const getCity = (param: any) => {
   }
 };
 
-export default function City({ slug: any, data }) {
+export default function City({ slug, data }: any) {
   let currentTemp: any = Math.round(data.main.temp);
   let currentLow: any = Math.round(data.main.temp_min);
   let currentHigh: any = Math.round(data.main.temp_max);
