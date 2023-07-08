@@ -5,7 +5,7 @@ import Link from "next/link";
 import Head from "next/head";
 import SearchBox from "../../app/components/SearchBox";
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps(context: any) {
   const city = getCity(context.params.city);
   if (!city) {
     return {
