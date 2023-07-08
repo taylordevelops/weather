@@ -36,33 +36,35 @@ export default function SearchBox({ placeholder }) {
   };
 
   return (
-    <div className="search">
-      <input
-        type="text"
-        value={query}
-        onChange={onChange}
-        placeholder={placeholder ? placeholder : ""}
-      />
+    <>
+      <div className="search">
+        <input
+          type="text"
+          value={query}
+          onChange={onChange}
+          placeholder={placeholder ? placeholder : ""}
+        />
 
-      {query.length > 3 && (
-        <ul>
-          {results.length > 0 ? (
-            results.map((city) => {
-              return (
-                <li key={city.slug}>
-                  <Link href={`/location/${city.slug}`}>
-                    {city.name}
-                    {city.state ? `, ${city.state}` : ""}{" "}
-                    <span>({city.country})</span>
-                  </Link>
-                </li>
-              );
-            })
-          ) : (
-            <li className="search__no-results">No results found</li>
-          )}
-        </ul>
-      )}
-    </div>
+        {query.length > 3 && (
+          <ul>
+            {results.length > 0 ? (
+              results.map((city) => {
+                return (
+                  <li key={city.slug}>
+                    <Link href={`/location/${city.slug}`}>
+                      {city.name}
+                      {city.state ? `, ${city.state}` : ""}{" "}
+                      <span>({city.country})</span>
+                    </Link>
+                  </li>
+                );
+              })
+            ) : (
+              <li className="search__no-results">No results found</li>
+            )}
+          </ul>
+        )}
+      </div>
+    </>
   );
 }

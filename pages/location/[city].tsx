@@ -77,21 +77,21 @@ export default function City({ slug, data }) {
           <div className="currentTemp">{currentTemp}&deg;F</div>
           <div className="wind">
             <span className="windText">{wind}</span>
-            <span class="largeLabel">MPH</span>{" "}
-            <div class="smallLabel">winds</div>
+            <span className="largeLabel">MPH</span>{" "}
+            <div className="smallLabel">winds</div>
           </div>
         </div>
         <div className="bottomRow">
           <div className="feelsLike">
-            <div class="smallLabel">Feels Like</div>
+            <div className="smallLabel">Feels Like</div>
             {feelsLike}&deg;F
           </div>
           <div className="currentHigh">
-            <div class="smallLabel">High</div>
+            <div className="smallLabel">High</div>
             {currentHigh}&deg;F
           </div>
           <div className="currentLow">
-            <div class="smallLabel">Low</div>
+            <div className="smallLabel">Low</div>
             {currentLow}&deg;F{" "}
           </div>
         </div>
