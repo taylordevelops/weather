@@ -8,11 +8,11 @@ export default function SearchBox({ placeholder }: any) {
   const [query, setQuery] = React.useState("");
   const [results, setResults] = React.useState([]);
 
-  const onChange = (e) => {
+  const onChange = (e: any) => {
     const { value } = e.target;
     setQuery(value);
 
-    let matchingCities = [];
+    let matchingCities: any = [];
 
     if (value.length > 3) {
       for (let city of cities) {
